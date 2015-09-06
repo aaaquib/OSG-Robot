@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <OSGVE_CONFIG_COMPILER>MSVC 100</OSGVE_CONFIG_COMPILER>
+    <OSGVE_OUTPUT_SUBDIR>$(Configuration)\$(OSGVE_CONFIG_COMPILER)\$(Platform)</OSGVE_OUTPUT_SUBDIR>
+    <FLTK_DIR>$(OSGVE_DIR)\dependencies</FLTK_DIR>
+    <OSG_DIR>$(OSGVE_DIR)\dependencies</OSG_DIR>
+    <OPENAL_DIR>$(OSGVE_DIR)\dependencies</OPENAL_DIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>osgve Library and App</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OSGVE_DIR)\include;$(OSGVE_DIR)\include\osgVirtualEnvironment;$(OSG_DIR)\include;$(FLTK_DIR)\include;$(OPENAL_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OpenAL32.lib;alut.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;wsock32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENAL_DIR)\lib\$(OSGVE_OUTPUT_SUBDIR)\;$(OSG_DIR)\lib\$(OSGVE_OUTPUT_SUBDIR)\;$(FLTK_DIR)\lib\$(OSGVE_OUTPUT_SUBDIR)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OSGVE_CONFIG_COMPILER">
+      <Value>$(OSGVE_CONFIG_COMPILER)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OSGVE_OUTPUT_SUBDIR">
+      <Value>$(OSGVE_OUTPUT_SUBDIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FLTK_DIR">
+      <Value>$(FLTK_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OSG_DIR">
+      <Value>$(OSG_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OPENAL_DIR">
+      <Value>$(OPENAL_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

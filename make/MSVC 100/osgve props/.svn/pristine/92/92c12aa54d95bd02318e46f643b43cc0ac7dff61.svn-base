@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <OSGVE_DEFAULT_DIR>$(ProjectDir)\..\..\..\..</OSGVE_DEFAULT_DIR>
+    <OSGVE_DIR>$(OSGVE_DEFAULT_DIR)</OSGVE_DIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OSGVE_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>osgVirtualEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OSGVE_DIR)\bin\$(OSGVE_OUTPUT_SUBDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OSGVE_DEFAULT_DIR">
+      <Value>$(OSGVE_DEFAULT_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OSGVE_DIR">
+      <Value>$(OSGVE_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
