@@ -73,3 +73,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.tlog
+make/MSVC 100/ipch/myfirstapp-49030fa7/myfirstapp-b75d947b.ipch
+*.sdf
+*.rc
+make/MSVC 100/Debug/MyFirstApp.lastbuildstate
+*.exp
+make/MSVC 100/Debug/MyFirstApp.exe.embed.manifest.res
+*.manifest
+make/MSVC 100/Debug/vc100.idb
